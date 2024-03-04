@@ -28,9 +28,10 @@ public class ExampleScreen extends SceneScreen {
         scene = new Scene(sceneAsset.scene);
         sceneManager = new SceneManager();
         sceneManager.addScene(scene);
+        transform = scene.modelInstance.transform;
 
         // setup camera (The BoomBox model is very small so you may need to adapt camera settings for your scene)
-        camera = new PerspectiveCamera(60f, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        camera = new PerspectiveCamera(20f, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         float d = .02f;
         camera.near = d / 1000f;
         camera.far = 200;
